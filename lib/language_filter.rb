@@ -3,12 +3,12 @@
 require 'pathname'
 require 'language_filter/error'
 require 'language_filter/version'
-require_relative "language_filter/use_creative_letters_patch"
+require_relative "use_creative_letters_patch"
 
 module LanguageFilter
   class Filter
     prepend UseCreativeLettersPatch
-    
+
     attr_accessor :matchlist, :exceptionlist, :replacement, :creative_letters
     attr_reader :creative_matchlist
 
